@@ -66,3 +66,14 @@ You can copy the template `.env.example` to `.env` to override defaults locally:
 ```bash
 cp .env.example .env
 ```
+
+## Barko audit
+
+The Barko audit was run on the project structure and test automation codebase:
+
+- **High-priority findings:** None detected. All sensitive files (`.env`, `.barko/secrets.local`) are excluded via `.gitignore`, condition-based waits are strictly used instead of fixed sleeps, and all locators reside solely in page objects.
+- **Medium-priority findings:**
+  - *Finding:* Multi-tab session synchronization check. *Resolution:* Left as-is; out of scope for this assignment as each test runs in an independent browser context.
+- **Low-priority findings:**
+  - *Finding:* Multi-browser matrix (WebKit and Firefox). *Resolution:* Left as-is; out of scope for this assignment as headless Chromium is specified by the project scope.
+
