@@ -1,0 +1,19 @@
+{
+  "id": "T1",
+  "name": "T1 login and logout",
+  "test_file": "tests/test_t1_login_logout.py",
+  "test_function": "test_T1_login_and_logout",
+  "status": "passed",
+  "precondition": "The browser is on the Sauce Demo login page (URL path /). No user is logged in.",
+  "steps": [
+    "Enter the username standard_user and the password secret_sauce, and click Login.",
+    "Open the burger menu and click Logout."
+  ],
+  "expected_results": [
+    "After step 1, the URL path is /inventory.html.",
+    "After step 1, the page heading reads 'Products'.",
+    "After step 1, the product list contains 6 products.",
+    "After step 2, the URL path is /.",
+    "After step 2, the Login button is visible."
+  ]
+}

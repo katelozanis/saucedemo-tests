@@ -1,0 +1,18 @@
+{
+  "id": "T2",
+  "name": "T2 sort products by price",
+  "test_file": "tests/test_t2_sort_products_by_price.py",
+  "test_function": "test_T2_sort_products_by_price",
+  "status": "passed",
+  "precondition": "standard_user is logged in and on the inventory page (/inventory.html). The sort dropdown has its default option, 'Name (A to Z)'. The page shows 6 products.",
+  "steps": [
+    "Note the names of the products on the page.",
+    "Select 'Price (low to high)' in the sort dropdown."
+  ],
+  "expected_results": [
+    "The selected option of the sort dropdown is 'Price (low to high)'.",
+    "The displayed prices, read as numeric amounts, are in non-decreasing order: each price is less than or equal to the next.",
+    "The product list still contains 6 products.",
+    "The set of product names is the same as the names noted in step 1."
+  ]
+}

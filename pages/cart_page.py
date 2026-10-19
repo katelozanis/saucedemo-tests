@@ -7,14 +7,22 @@ class CartPage(BasePage):
 
     def __init__(self, page: Page):
         super().__init__(page)
-        self.cart_items = self.page.locator(".cart_item")
+        self.cart_list = self.page.locator(".cart_list")
+        self.cart_items = self.page.locator('[data-test="inventory-item"]')
         self.item_name = self.page.locator('[data-test="inventory-item-name"]')
         self.item_price = self.page.locator('[data-test="inventory-item-price"]')
         self.item_quantity = self.page.locator('[data-test="item-quantity"]')
         self.checkout_button = self.page.locator('[data-test="checkout"]')
         self.continue_shopping_button = self.page.locator('[data-test="continue-shopping"]')
 
+    def wait_for_cart_loaded(self) -> None:
+        expect(self.cart_list).to_be_visible()
+
     def get_items_count(self) -> int:
+        self.wait_for_cart_loaded()
+        if self.page.locator('[data-test="shopping-cart-badge"]').is_visible():
+            # Condition-based wait for the added cart item to render
+            self.cart_items.first.wait_for(state="visible")
         return self.cart_items.count()
 
     def get_first_item_name(self) -> str:

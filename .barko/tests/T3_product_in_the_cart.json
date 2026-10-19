@@ -1,0 +1,21 @@
+{
+  "id": "T3",
+  "name": "T3 product in the cart",
+  "test_file": "tests/test_t3_product_in_cart.py",
+  "test_function": "test_T3_product_in_the_cart",
+  "status": "passed",
+  "precondition": "standard_user is logged in and on the inventory page (/inventory.html). The cart is empty (there is no cart badge).",
+  "steps": [
+    "Note the name and price of the first product in the list.",
+    "Click 'Add to cart' for that product.",
+    "Click the cart icon."
+  ],
+  "expected_results": [
+    "After step 2, the cart badge text is '1'.",
+    "After step 3, the URL path is /cart.html.",
+    "After step 3, the cart lists exactly 1 item.",
+    "The cart item's name equals the name noted in step 1.",
+    "The cart item's price equals the price noted in step 1, as displayed (for example '$29.99').",
+    "The cart item's displayed quantity is 1."
+  ]
+}
