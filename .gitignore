@@ -1,0 +1,21 @@
+.DS_Store
+.env
+*.log
+node_modules/
+.venv/
+venv/
+__pycache__/
+target/
+build/
+dist/
+allure-results/
+allure-report/
+test-results/
+reports/
+
+# Barko: ignore only secrets and bulky recordings
+.barko/secrets.local
+.barko/traces/
+.barko/videos/
+.barko/frames/
+.barko/a11y/reports/
