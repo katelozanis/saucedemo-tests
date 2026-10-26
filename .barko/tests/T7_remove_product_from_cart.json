@@ -1,0 +1,20 @@
+{
+  "id": "T7",
+  "name": "remove product from cart updates badge",
+  "test_file": "tests/test_t7_remove_product_from_cart.py",
+  "test_function": "test_T7_remove_product_from_cart_updates_badge",
+  "ticket_id": "BB-4",
+  "type": "own",
+  "status": "passed",
+  "precondition": "standard_user is logged in, on the cart page (/cart.html), and the cart lists 1 item.",
+  "steps": [
+    "Click the 'Remove' button for the item in the cart.",
+    "Click the 'Continue Shopping' button."
+  ],
+  "expected_results": [
+    "After step 1, the cart item is removed and the cart lists 0 items.",
+    "After step 1, the cart badge is removed from the header.",
+    "After step 2, the URL path is /inventory.html.",
+    "After step 2, the first product's button text is 'Add to cart'."
+  ]
+}
