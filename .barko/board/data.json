@@ -38,15 +38,23 @@
       "started_at": "2026-10-19T11:43:30Z",
       "completed_at": "2026-10-19T11:51:40Z",
       "description": "Parent: BB-1\nPrecondition: standard_user is logged in, on the cart page (/cart.html), and cart has 1 item.\nSteps:\n1. Click the \"Checkout\" button to proceed to checkout step one.\n2. Leave First Name empty, enter \"Doe\" in Last Name, and enter \"12345\" in Zip/Postal Code.\n3. Click \"Continue\" button.\nExpected result:\n1. After step 1, the URL path is /checkout-step-one.html.\n2. After step 3, the URL path is still /checkout-step-one.html.\n3. After step 3, an error message is visible.\n4. After step 3, the error message text reads \"Error: First Name is required\".\n\nWhen the test is green and the whole suite passes: import it into Barko, commit only this test's files, its new file in .barko/tests/ and the current .barko/ changes, with the subject `Add checkout missing first name (BB-2)`, then add the short commit hash as a comment on this ticket. Do not amend the commit.",
-      "comments": []
+      "comments": [
+        {
+          "author": "Barko",
+          "created_at": "2026-10-19T11:51:40Z",
+          "text": "Commit: 13281f7"
+        }
+      ]
     },
     {
       "id": "BB-3",
       "title": "Child: problem user sort does not reorder",
-      "status": "To Do",
+      "status": "Done",
       "type": "edge",
       "parent_id": "BB-1",
       "created_at": "2026-10-19T11:42:15Z",
+      "started_at": "2026-10-19T11:52:10Z",
+      "completed_at": "2026-10-19T11:58:30Z",
       "description": "Parent: BB-1\nPrecondition: problem_user is logged in and on the inventory page (/inventory.html). The sort dropdown has its default option, \"Name (A to Z)\". The page shows 6 products.\nSteps:\n1. Note the names and order of the products on the page.\n2. Select \"Name (Z to A)\" in the sort dropdown.\nExpected result:\n1. The selected option of the sort dropdown is \"Name (Z to A)\".\n2. The product list still displays items starting with \"Sauce Labs Backpack\" and maintains the initial order.\n3. The product list still contains 6 products.\n\nWhen the test is green and the whole suite passes: import it into Barko, commit only this test's files, its new file in .barko/tests/ and the current .barko/ changes, with the subject `Add problem user sort does not reorder (BB-3)`, then add the short commit hash as a comment on this ticket. Do not amend the commit.",
       "comments": []
     },

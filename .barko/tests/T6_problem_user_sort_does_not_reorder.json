@@ -1,0 +1,19 @@
+{
+  "id": "T6",
+  "name": "problem user sort does not reorder",
+  "test_file": "tests/test_t6_problem_user_sort_does_not_reorder.py",
+  "test_function": "test_T6_problem_user_sort_does_not_reorder",
+  "ticket_id": "BB-3",
+  "type": "edge",
+  "status": "passed",
+  "precondition": "problem_user is logged in and on the inventory page (/inventory.html). The sort dropdown has its default option, 'Name (A to Z)'. The page shows 6 products.",
+  "steps": [
+    "Note the names and order of the products on the page.",
+    "Attempt to select 'Name (Z to A)' in the sort dropdown."
+  ],
+  "expected_results": [
+    "The selected option of the sort dropdown remains 'Name (A to Z)'.",
+    "The product list still displays items starting with 'Sauce Labs Backpack' and maintains the initial order.",
+    "The product list still contains 6 products."
+  ]
+}
