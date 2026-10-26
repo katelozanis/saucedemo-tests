@@ -73,7 +73,13 @@
       "started_at": "2026-10-19T12:00:10Z",
       "completed_at": "2026-10-19T12:06:50Z",
       "description": "Precondition: standard_user is logged in, on the cart page (/cart.html), and the cart lists 1 item.\nSteps:\n1. Click the \"Remove\" button for the item in the cart.\n2. Click the \"Continue Shopping\" button.\nExpected result:\n1. After step 1, the cart item is removed and the cart lists 0 items.\n2. After step 1, the cart badge is removed from the header.\n3. After step 2, the URL path is /inventory.html.\n4. After step 2, the first product's button text is \"Add to cart\".\n\nWhen the test is green and the whole suite passes: import it into Barko, commit this test's files, its new file in .barko/tests/ and the current .barko/ changes, with the subject `Add remove product from cart updates badge (BB-4)`, then add the short commit hash as a comment on this ticket. Do not amend the commit.",
-      "comments": []
+      "comments": [
+        {
+          "author": "Barko",
+          "created_at": "2026-10-19T12:06:50Z",
+          "text": "Commit: 5e01c5a"
+        }
+      ]
     }
   ]
 }
