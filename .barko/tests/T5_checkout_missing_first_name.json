@@ -1,0 +1,21 @@
+{
+  "id": "T5",
+  "name": "checkout missing first name",
+  "test_file": "tests/test_t5_checkout_missing_first_name.py",
+  "test_function": "test_T5_checkout_missing_first_name",
+  "ticket_id": "BB-2",
+  "type": "negative",
+  "status": "passed",
+  "precondition": "standard_user is logged in, on the cart page (/cart.html), and cart has 1 item.",
+  "steps": [
+    "Click the 'Checkout' button to proceed to checkout step one.",
+    "Leave First Name empty, enter 'Doe' in Last Name, and enter '12345' in Zip/Postal Code.",
+    "Click 'Continue' button."
+  ],
+  "expected_results": [
+    "After step 1, the URL path is /checkout-step-one.html.",
+    "After step 3, the URL path is still /checkout-step-one.html.",
+    "After step 3, an error message is visible.",
+    "After step 3, the error message text reads 'Error: First Name is required'."
+  ]
+}
